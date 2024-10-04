@@ -1,8 +1,11 @@
 const net = require('net');
 
+const porta = 8080;
+const ip = '192.168.0.100'; // Substitua pelo IP do computador que está rodando o servidor
+
 const client = new net.Socket();
 
-client.connect(8080, 'localhost', () => {
+client.connect(porta, ip, () => {
   console.log('Conectado ao servidor');
 
   const readline = require('readline');
